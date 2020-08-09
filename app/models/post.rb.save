@@ -1,0 +1,5 @@
+class Post < ActiveRecord::Base
+	 :category
+	validates :title, :content, :category_id, presence: true
+	has_many :line_items, inverse_of: :order
+end
